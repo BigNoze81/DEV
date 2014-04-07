@@ -12,5 +12,8 @@
     <author email="ccoenraets@gmail.com" href="http://coenraets.org">
         Christophe Coenraets
     </author>
+     <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
 
 </widget>
