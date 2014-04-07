@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.coolappz.Plop" version="1.0.0">
-    <name>Plop</name>
-    <description>Cordova Application</description>
-    <author email="info@com.coolappz" href="http://www.coolappz.com">alex</author>
-    <access origin="*"/>
-    <preference name="fullscreen" value="true"/>
-    <preference name="webviewbounce" value="true"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.coenraets.employeedirectory" version="1.1.0" versionCode="10">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Employee Directory</name>
+
+    <description>
+        A simple employee directory application
+    </description>
+
+    <author email="ccoenraets@gmail.com" href="http://coenraets.org">
+        Christophe Coenraets
+    </author>
+
 </widget>
