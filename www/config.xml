@@ -12,10 +12,7 @@
     <author email="ccoenraets@gmail.com" href="http://coenraets.org">
         Christophe Coenraets
     </author>
-     <feature name="Device">
-        <param name="ios-package" value="CDVDevice" />
-    </feature>
-    <feature name="Camera">
+    <feature name="http://api.phonegap.com/1.0/camera">
     <param name="ios-package" value="CDVCamera" />
 </feature>
 
