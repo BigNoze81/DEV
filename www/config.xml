@@ -15,5 +15,8 @@
      <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
-<gap:plugin name="com.performanceactive.plugins.camera" version="1.2" />
+    <feature name="Camera">
+    <param name="ios-package" value="CDVCamera" />
+</feature>
+
 </widget>
