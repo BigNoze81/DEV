@@ -1,0 +1,227 @@
+<script type="text/html" id="tpl-home">
+    <div>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left">
+                <h1 class="topcoat-navigation-bar__title">X Occase Lite</h1>
+            </div>
+        </div>
+
+        <div>
+            <ul class="topcoat-list__container modal_menu">
+                <li class="topcoat-list__item modal_menu">
+                    <a href="#achat" class="modal_menu_button">
+                        <object class="modal_icon_achat" data="svg/arrow_down.svg" type="image/svg+xml" width="16" height="16"></object>Acheter
+                    </a>
+                </li>
+                <li class="topcoat-list__item modal_menu">      
+                    <a href="#vente" class="modal_menu_button">
+                        <object class="modal_icon_vente" data="svg/arrow_up.svg" type="image/svg+xml" width="16" height="16"></object>Vendre
+                    </a>
+                </li>
+                <li class="topcoat-list__item modal_menu">
+                    <a href="#profil" class="modal_menu_button">
+                        <object class="modal_icon_user" data="svg/user.svg" type="image/svg+xml" width="16" height="16"></object>Mon profil
+                    </a>
+                </li>
+                <li class="topcoat-list__item modal_menu">
+                    <a href="#tablet" class="modal_menu_button">
+                        <object class="modal_icon_user" data="svg/tablet.svg" type="image/svg+xml" width="16" height="16"></object>Tablette
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="tpl-achats-ventes">
+    <div>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left">
+                <object class="modal_icon_back" data="svg/back.svg" type="image/svg+xml" width="16" height="16"></object>
+            </div>
+            <div class="topcoat-navigation-bar__item left">
+                <h1 class="topcoat-navigation-bar__title">X Occase Lite</h1>
+            </div>
+        </div>
+        <div>
+            <ul class="topcoat-list__container modal_menu">
+                {{#articles}}
+                    <li class="topcoat-list__item modal_menu">
+                        <a href="{{url}}" class="modal_menu_button">
+                            {{nom}}
+                        </a>
+                    </li>
+                {{/articles}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="tpl-produits">
+    <div id="contenu">
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left">
+                <object class="modal_icon_back" data="svg/back.svg" type="image/svg+xml" width="16" height="16"></object>
+            </div>
+            <div class="topcoat-navigation-bar__item left">
+                    <h1 class="topcoat-navigation-bar__title">X Occase Lite</h1>
+            </div>
+        </div>
+        <div class="modal_photo">
+            {{#photo}}
+            <img src={{.}}>
+            {{/photo}}
+            <h1 class="topcoat-navigation-bar__title">{{nom}}</h1>
+        </div>
+        <div class="modal_profil modal_zone_info">
+            <p>CARACTÉRISTIQUES TECHNIQUES :</p>
+            <ul>
+                {{#description}}
+                <li>{{.}}</li>
+                {{/description}}
+            </ul>
+        </div>
+        <div class="modal_profil modal_zone_info">
+            <p>Prix : {{prix}}</p>
+        </div>
+        <div class="modal_profil modal_zone_info">
+            <p>Livraison : {{livraison}}</p>
+        </div>
+        <div class="modal_profil modal_zone_info">
+            <p>Localisation : {{localisation}}</p>
+        </div>
+        <div class="modal_profil modal_zone_info">
+            <p>Vendeur : {{vendeur}} <a href="#profil_john"><object class="modal_icon_user" data="svg/user.svg" type="image/svg+xml" width="16" height="16"></object></a></p>
+        </div>  
+    </div>
+    <div id="footer">
+        <button class="topcoat-button--cta center full">Ajouter au panier</button>
+    </div>
+</script>
+
+<script type="text/html" id="tpl-tablet">
+    <div>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left">
+                <object class="modal_icon_back" data="svg/back.svg" type="image/svg+xml" width="16" height="16"></object>
+            </div>
+            <div class="topcoat-navigation-bar__item left">
+                <h1 class="topcoat-navigation-bar__title">Tablette</h1>
+            </div>
+        </div>
+        <div>
+            <ul class="topcoat-list__container modal_menu">
+                <li class="topcoat-list__item modal_menu">
+                    <a href="#photo" class="modal_menu_button">
+                    <object class="modal_icon_user" data="svg/camera.svg" type="image/svg+xml" width="16" height="16"></object>Appareil Photo
+                    </a>
+                </li>
+                <li class="topcoat-list__item modal_menu">
+                    <a href="#gps" class="modal_menu_button">
+                    <object class="modal_icon_user" data="svg/location.svg" type="image/svg+xml" width="16" height="16"></object>GPS
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="tpl-photo">
+    <div>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left">
+                <object class="modal_icon_back" data="svg/back.svg" type="image/svg+xml" width="16" height="16"></object>
+            </div>
+            <div class="topcoat-navigation-bar__item left">
+                <h1 class="topcoat-navigation-bar__title">Tablette / Appareil photo</h1>
+            </div>
+        </div>
+        <div>
+            <ul class="topcoat-list__container modal_menu">
+                <li class="topcoat-list__item modal_menu">
+                    <button onclick="capturePhoto();" class="topcoat-button--cta center full">Prendre une photo</button>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img style="display:none;" id="image" src="" />
+        </div>
+    </div>                    
+</script>
+
+<script type="text/html" id="tpl-gps">
+    <div>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left">
+                <object class="modal_icon_back" data="svg/back.svg" type="image/svg+xml" width="16" height="16"></object>
+            </div>
+            <div class="topcoat-navigation-bar__item left">
+                <h1 class="topcoat-navigation-bar__title">GPS</h1>
+            </div>
+        </div>
+        <div class="scroller">
+            <p id="geolocation">Recherche des coordonnées GPS en cours...</p>
+        <div>
+            <img style="display:none;" id="image" src="" width="50%" />
+        </div>
+    </div>  
+</script>
+
+<script type="text/html" id="tpl-profil">
+    <div id="contenu">
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left">
+                <object class="modal_icon_back" data="svg/back.svg" type="image/svg+xml" width="16" height="16"></object>
+            </div>
+            <div class="topcoat-navigation-bar__item left">
+                <h1 class="topcoat-navigation-bar__title">X Occase Lite</h1>
+            </div>
+        </div>
+
+        <div>
+            <div class="modal_photo">
+                <button class="topcoat-button--cta">Mettre une photo</button>
+            </div>
+            <div class="modal_profil">
+                <p><span class="modal_label">Nom : </span><input type="text" class="topcoat-text-input" placeholder="text" value="{{nom}}"></p>
+                <p><span class="modal_label">Prénom : </span><input type="text" class="topcoat-text-input" placeholder="text" value="{{prenom}}"></p>
+                <p><span class="modal_label">Commentaire : </span><textarea class="topcoat-textarea" rows="3" cols="10">{{commentaire}}</textarea></p>
+                <p><span class="modal_label">Téléphone : </span><input type="text" class="topcoat-text-input" placeholder="text" value="{{tel}}"></p>
+                <p><span class="modal_label">Localisation : </span><input type="text" class="topcoat-text-input" placeholder="text" value="{{localisation}}"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <button class="topcoat-button--cta center full">Modifier mon profil</button>
+    </div>
+</script>
+
+<script type="text/html" id="tpl-profil-read">
+    <div>
+        <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item left">
+                    <object class="modal_icon_back" data="svg/back.svg" type="image/svg+xml" width="16" height="16"></object>
+                </div>
+                <div class="topcoat-navigation-bar__item left">
+                    <h1 class="topcoat-navigation-bar__title">X Occase Lite</h1>
+                </div>
+            </div>
+
+            <div>
+                <div class="modal_photo">
+                    <img src={{photo}}>
+                    <h1 class="topcoat-navigation-bar__title">{{prenom}} {{nom}}</h1>
+                </div>
+                <div class="modal_profil modal_zone_info">
+                    <p><span class="modal_zone_info_titre">Commentaire personnel : </span>{{commentaire}}</p>
+                </div>
+                <div class="modal_profil modal_zone_info">
+                    <p><span class="modal_zone_info_titre">Téléphone : </span>{{tel}}</p>
+                </div>
+                <div class="modal_profil modal_zone_info">
+                    <p><span class="modal_zone_info_titre">Localisation : </span>{{localisation}}</p>
+                </div>
+            </div>
+    </div>
+</script>
